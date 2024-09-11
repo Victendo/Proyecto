@@ -10,15 +10,15 @@ public class Ejercicio2_3 : MonoBehaviour
     void Start()
     {
         float producto = vidas * exp;
-        Debug.Log("El producto de vidas (" + vidas + ") y exp (" + exp + ") es: " + resultadoMultiplicación);
+        Debug.Log("El producto de vidas (" + vidas + ") y exp (" + exp + ") es: " + producto);
 
 
         float cociente = vidas / exp;
-        Debug.Log("El cociente de vidas (" + vidas + ") y exp (" + exp + ") es: " + resultadoDivisión);
+        Debug.Log("El cociente de vidas (" + vidas + ") y exp (" + exp + ") es: " + cociente);
 
 
         float resto = vidas % exp;
-        Debug.Log("El resto de vidas (" + vidas + ") y exp (" + exp + ") es: " + resultadoResto);
+        Debug.Log("El resto de vidas (" + vidas + ") y exp (" + exp + ") es: " + resto);
 
 
         int dobleVidas = vidas *= 2;

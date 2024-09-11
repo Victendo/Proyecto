@@ -13,8 +13,10 @@ public class Ejercicio2_2 : MonoBehaviour
     void Start()
     {
         Debug.Log("vidas: " + vidas + " exp = " + exp);
+
         float resultadoSuma = vidas + exp;
         Debug.Log("La suma de las " + vidas + " vidas y el nivel " + exp + " de exp crea el total de: " + resultadoSuma);
+
         float resultadoResta = vidas - exp;
         Debug.Log("La resta de las " + vidas + " vidas y el nivel " + exp + " de exp crea el total de: " + resultadoResta);
     }
