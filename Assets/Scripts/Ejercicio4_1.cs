@@ -7,9 +7,9 @@ public class Ejercicio4_1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        areaCirculo(35.7f);
-        areaTriangulo(55.8f, 39.2f);
-        areaCuadrado(29.5f);
+        AreaCirculo(35.7f);
+        AreaTriangulo(55.8f, 39.2f);
+        AreaCuadrado(29.5f);
     }
 
     // Update is called once per frame
@@ -18,7 +18,7 @@ public class Ejercicio4_1 : MonoBehaviour
         
     }
 
-    float areaCirculo (float radioCirculo)
+    float AreaCirculo (float radioCirculo)
     {
         Debug.Log("El radio del circulo es de " + radioCirculo + " centimetros.");
         float areaTotalCir;
@@ -27,7 +27,7 @@ public class Ejercicio4_1 : MonoBehaviour
         return areaTotalCir;
     }
 
-    float areaTriangulo(float baseTriangulo, float alturaTriangulo)
+    float AreaTriangulo(float baseTriangulo, float alturaTriangulo)
     {
         Debug.Log("La base del triangulo es de " + baseTriangulo + " centimetros, mientras que la altura del triangulo es de " + alturaTriangulo + " centimetros.");
         float areaTotalT;
@@ -36,7 +36,7 @@ public class Ejercicio4_1 : MonoBehaviour
         return areaTotalT;
     }
 
-    float areaCuadrado(float ladoCuadrado)
+    float AreaCuadrado(float ladoCuadrado)
     {
         Debug.Log("El lado del cuadrado es de " + ladoCuadrado + " centimetros.");
         float areaTotalCua;
