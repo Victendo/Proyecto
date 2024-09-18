@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,23 +11,25 @@ public class Ejercicio7_11 : MonoBehaviour
     void Start()
     {
         TabladeMultiplicar();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void TabladeMultiplicar()
     {
         Debug.Log("TABLA DE MULTIPLICAR DEL 7");
-        while (multiplicado <= 70)
+        for (int i = multiplicado; multiplicado <= 70; multiplicado++)
         {
-            int multiplicacion = multiplicado * multiplicador;
-            Debug.Log(multiplicado + " * " + multiplicador + " = " + multiplicacion);
-            multiplicador++;
+            for (int j = multiplicador; multiplicador <= 10; multiplicador++)
+            {
+                Debug.Log(multiplicado + " * " + multiplicador + " = " + multiplicado * multiplicador);
+            }
         }
     }
 }
+
