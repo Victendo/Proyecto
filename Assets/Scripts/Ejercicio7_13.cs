@@ -18,10 +18,20 @@ public class Ejercicio7_13 : MonoBehaviour
 
     void PrimoDivisible(int numero)
     {
-        if (numero % 3 != 0)
-
+        if (numero == 0 || numero ==1)
+        {
+            Debug.Log(numero + " no es un numero primo");
+        }
+        for (int i = 2; i <= numero; i++)
+        {
+            if (numero % 2 == 0)
             {
-
+                Debug.Log(numero + " no es un numero primo");
+            }
+            else
+            {
+                Debug.Log(numero + " es un numero primo");
+            }
         }
     }
 }
