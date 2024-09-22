@@ -6,14 +6,25 @@ public class Ejercicio8_1 : MonoBehaviour
 {
     [SerializeField] private string nombre;
     [SerializeField] private int vidaInicial;
-    private int vidaActual;
+    int vidaActual;
     [SerializeField] private float experiencia;
     [SerializeField]private bool final;
+    [SerializeField] int dañoMinimo = 9;
+    [SerializeField] int dañoMaximo = 15;
+    [SerializeField] int capacidadTotal = 20;
+    [SerializeField] bool automatica = false;
+    int municionActual;
 
     public string Nombre { get => nombre; set => nombre = value; }
     public float Experiencia { get => experiencia; set => experiencia = value; }
     public bool Final { get => final; set => final = value; }
     public int VidaInicial { get => vidaInicial; set => vidaInicial = value; }
+    public int DañoMinimo { get => dañoMinimo; set => dañoMinimo = value; }
+    public int DañoMaximo { get => dañoMaximo; set => dañoMaximo = value; }
+    public int CapacidadTotal { get => capacidadTotal; set => capacidadTotal = value; }
+    public bool Automatica { get => automatica; set => automatica = value; }
+    public int MunicionActual { get => municionActual; set => municionActual = value; }
+    public int VidaActual { get => vidaActual; set => vidaActual = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -90,4 +101,38 @@ public class Ejercicio8_1 : MonoBehaviour
         }
 
     }
-}
+
+    public void Arma()
+    {
+        municionActual = capacidadTotal;
+        float UsoArma = UtilizarArma();
+        float Recarga = RecargarArma();
+    }
+
+    public float UtilizarArma()
+    {
+        if (municionActual > 0)
+        {
+            municionActual--;
+            return 0;
+        }
+        else
+        {
+
+            return -1;
+        }
+    }
+
+    public float RecargarArma()
+    {
+        if (municionActual < capacidadTotal)
+        {
+            municionActual = capacidadTotal;
+            return 0;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    }
