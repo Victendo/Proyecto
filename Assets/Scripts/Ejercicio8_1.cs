@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Ejercicio8_1 : MonoBehaviour
 {
-    private string nombre;
-    private int vida;
-    private float experiencia;
-    private bool final;
+    [SerializeField] private string nombre;
+    [SerializeField] private int vidaInicial;
+    private int vidaActual;
+    [SerializeField] private float experiencia;
+    [SerializeField]private bool final;
 
     public string Nombre { get => nombre; set => nombre = value; }
-    public int Vida { get => vida; set => vida = value; }
     public float Experiencia { get => experiencia; set => experiencia = value; }
     public bool Final { get => final; set => final = value; }
+    public int VidaInicial { get => vidaInicial; set => vidaInicial = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,7 @@ public class Ejercicio8_1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && final == false)
         {
              Debug.Log("Nombre: " + nombre);
-                Debug.Log("Vida: " + vida);
+                Debug.Log("Vida: " + vidaInicial);
                 Debug.Log("Experiencia: " + experiencia);
                 Debug.Log("Nivel: " + CalcularNivel());
                 final = true;
@@ -46,5 +47,47 @@ public class Ejercicio8_1 : MonoBehaviour
         {
             Debug.Log("yaEjecutado");
         }
+    }
+
+    public void SistemaDeVida()
+    {
+        float cura = RecibirCura();
+        float daño = RecibirDaño();
+    }
+    public float RecibirCura()
+    {
+        vidaActual = vidaInicial + 8;
+        vidaInicial = vidaActual;
+        if (vidaActual >= 0)
+        {
+            return vidaActual;
+        }
+        else
+        {
+            vidaActual = -1;
+            return vidaActual;
+        }
+        
+    }
+
+    public float RecibirDaño()
+    {
+        vidaActual = vidaInicial - 5;
+        vidaInicial = vidaActual;
+        if (vidaActual == 0)
+        {
+            return vidaActual;
+        }
+        else if (vidaActual < 0)
+        {
+            vidaActual = -1;
+            return vidaActual;
+        }
+
+        else
+        {
+            return vidaActual;
+        }
+
     }
 }

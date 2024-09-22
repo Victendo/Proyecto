@@ -11,17 +11,19 @@ public class GameManager : MonoBehaviour
     {
         personaje = new Ejercicio8_1();
         personaje.Nombre = "Mario";
-        personaje.Vida = 69;
+        personaje.VidaInicial = 69;
         personaje.Experiencia = 3600.0f;
         personaje.Final = false;
         personaje.PrepararPersonaje();
+        personaje.SistemaDeVida();
 
         personaje2 = new Ejercicio8_1();
         personaje2.Nombre = "Sonic";
-        personaje2.Vida = 83;
+        personaje2.VidaInicial = 83;
         personaje2.Experiencia = 2743.7f;
         personaje2.Final = false;
         personaje2.PrepararPersonaje();
+        personaje.SistemaDeVida();
 
     }
 
