@@ -135,4 +135,45 @@ public class Ejercicio8_1 : MonoBehaviour
             return -1;
         }
     }
+
+    public void Enemigo(Ejercicio8_1 personaje)
+    {
+
     }
+
+    public void MiSistemaDeVidas ()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            float curar = RecibirCura();
+        }
+    }
+
+    public void MiSistemaDeVidas2()
+    {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            float curar = RecibirCura();
+        }
+    }
+
+    public void MiArma()
+    {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            float Disparar = UtilizarArma();
+        }
+    }
+
+    public void MiArma2()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            float Disparar = UtilizarArma();
+        }
+    }
+
+
+}
+
+

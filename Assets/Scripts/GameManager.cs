@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
         personaje.PrepararPersonaje();
         personaje.SistemaDeVida();
         personaje.Arma();
+        personaje.Enemigo(personaje2);
+        personaje.MiSistemaDeVidas();
+        personaje.MiArma();
 
         personaje2 = new Ejercicio8_1();
         personaje2.Nombre = "Sonic";
@@ -29,6 +32,9 @@ public class GameManager : MonoBehaviour
         personaje2.PrepararPersonaje();
         personaje.SistemaDeVida();
         personaje2.Arma();
+        personaje2.Enemigo(personaje);
+        personaje2.MiSistemaDeVidas2();
+        personaje2.MiArma2();
 
     }
 
