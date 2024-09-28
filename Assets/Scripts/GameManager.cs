@@ -4,43 +4,58 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Ejercicio8_1 personaje;
-    [SerializeField] Ejercicio8_1 personaje2;
+    [SerializeField] Personaje mario;
+    [SerializeField] Personaje sonic;
+    [SerializeField] SistemaDeVida marioVida;
+    [SerializeField] SistemaDeVida sonicVida;
+    
     // Start is called before the first frame update
     void Start()
     {
+        mario = new Personaje();
+        mario.Nombre = "Mario Bros";
+        mario.Vida = 69.9f;
+        mario.Experiencia = 2900;
+        marioVida = new SistemaDeVida();
+        marioVida.VidaInicial = 100.0f;
+        marioVida.VidaActual = 100.0f;
 
-        personaje = new Ejercicio8_1();
-        personaje.Nombre = "Mario";
-        personaje.VidaInicial = 69;
-        personaje.Experiencia = 3600.0f;
-        personaje.Final = false;
-        personaje.MunicionActual = 12;
-        personaje.PrepararPersonaje();
-        personaje.SistemaDeVida();
-        personaje.Arma();
-        personaje.Enemigo(personaje2);
-        personaje.MiSistemaDeVidas();
-        personaje.MiArma();
-
-        personaje2 = new Ejercicio8_1();
-        personaje2.Nombre = "Sonic";
-        personaje2.VidaInicial = 83;
-        personaje2.Experiencia = 2743.7f;
-        personaje2.Final = false;
-        personaje2.MunicionActual = 2;
-        personaje2.PrepararPersonaje();
-        personaje.SistemaDeVida();
-        personaje2.Arma();
-        personaje2.Enemigo(personaje);
-        personaje2.MiSistemaDeVidas2();
-        personaje2.MiArma2();
-
+        sonic = new Personaje();
+        sonic.Nombre = "Sonic the Hedgehog";
+        sonic.Vida = 82.5f;
+        sonic.Experiencia = 3820;
+        sonicVida.VidaInicial = 100.0f;
+        sonicVida.VidaActual = 100.0f; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PrepararPersonajes();
+        }
+    }
+
+    void PrepararPersonajes()
+    {
+        bool ejecucion = false;
+        if (ejecucion == false)
+        {
+            Debug.Log("Nombre Primer Personaje: " + mario.Nombre);
+            Debug.Log("Vida Primer Personaje: " + mario.Vida);
+            Debug.Log("Experiencia Primer Personaje: " + mario.Experiencia);
+            mario.MostrarNivel();
+
+            Debug.Log("Nombre Segundo Personaje: " + sonic.Nombre);
+            Debug.Log("Vida Segundo Personaje: " + sonic.Vida);
+            Debug.Log("Experiencia Segundo Personaje: " + sonic.Experiencia);
+            sonic.MostrarNivel();
+            ejecucion = true;
+        }
+        if (ejecucion == true)
+        {
+            Debug.Log("yaEjecutado");
+        }
     }
 }
