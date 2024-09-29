@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class Arma : MonoBehaviour
 {
+
+    //EJERCICIO 8.3 / EJERCICIO 8.4 
+
+
     [SerializeField] float danhoMinimo;
     [SerializeField] float danhoMaximo;
     [SerializeField] int capacidadTotal = 50;
     [SerializeField] bool automatica;
     int municionActual;
+
+    public float DanhoMinimo { get => danhoMinimo; set => danhoMinimo = value; }
+    public float DanhoMaximo { get => danhoMaximo; set => danhoMaximo = value; }
+    public int CapacidadTotal { get => capacidadTotal; set => capacidadTotal = value; }
+    public bool Automatica { get => automatica; set => automatica = value; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +30,19 @@ public class Arma : MonoBehaviour
     {
         
     }
+    public void ResultadoUso()
+    {
+        float posibleUso = UtilizarArma();
+        if (posibleUso == 0)
+        {
+            Debug.Log("Disparo conseguido");
+        }
+        if (posibleUso== -1)
+        {
+            Debug.Log("El disparo no ha sido posible. RELOAD!!!");
+        }
+    }
+
 
     public int UtilizarArma()
     {
@@ -31,6 +54,19 @@ public class Arma : MonoBehaviour
         else
         {
             return -1;
+        }
+    }
+
+    public void ResultadoRecarga()
+    {
+        float posibleRecarga = RecargarArma();
+        if (posibleRecarga == 0)
+        {
+            Debug.Log("Recarga conseguida");
+        }
+        if (posibleRecarga == -1)
+        {
+            Debug.Log("Arma ya cargada.");
         }
     }
 

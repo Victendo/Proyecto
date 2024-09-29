@@ -38,7 +38,7 @@ public class SistemaDeVida : MonoBehaviour
         }
     }
 
-    public void Cura()
+    public void CuraPersonaje()
     {
         float cura = RecibirCura(35.0f, vidaActual);
         Debug.Log("El personaje ha recibido una cura. Ahora su vida actual es: " + cura);

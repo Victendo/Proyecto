@@ -300,9 +300,6 @@ MonoBehaviour:
   nombre: 
   vida: 0
   experiencia: 0
-  enemigo: {fileID: 1375565541}
-  miSistemaDeVidas: {fileID: 0}
-  miArma: {fileID: 1022888564}
 --- !u!4 &722903544
 Transform:
   m_ObjectHideFlags: 0
@@ -619,9 +616,6 @@ MonoBehaviour:
   nombre: 
   vida: 0
   experiencia: 0
-  enemigo: {fileID: 722903543}
-  miSistemaDeVidas: {fileID: 0}
-  miArma: {fileID: 1003447884}
 --- !u!4 &1375565542
 Transform:
   m_ObjectHideFlags: 0
@@ -683,6 +677,8 @@ MonoBehaviour:
   sonic: {fileID: 722903543}
   marioVida: {fileID: 1375565543}
   sonicVida: {fileID: 722903545}
+  marioArma: {fileID: 1003447884}
+  sonicArma: {fileID: 1022888564}
 --- !u!4 &1762028336
 Transform:
   m_ObjectHideFlags: 0

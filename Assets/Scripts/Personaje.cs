@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Personaje : MonoBehaviour
 {
+
+    //EJERCICIO 8.1 / EJERCICIO 8.4
     
     [SerializeField] string nombre;
     [SerializeField] float vida;
     [SerializeField] float experiencia;
-    [SerializeField] Personaje enemigo;
-    [SerializeField] SistemaDeVida miSistemaDeVidas;
-    [SerializeField] Arma miArma;
 
     public string Nombre { get => nombre; set => nombre = value; }
     public float Vida { get => vida; set => vida = value; }
@@ -19,7 +18,6 @@ public class Personaje : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
 
     }
 
